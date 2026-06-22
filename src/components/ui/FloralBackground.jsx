@@ -49,7 +49,7 @@ export default function FloralBackground() {
         top:             '0',
         left:            `${left}%`,
         opacity:         '0',
-        animation:       `velouPetalFall ${duration}s linear ${delay}s infinite`,
+        animation:       `memoriesPetalFall ${duration}s linear ${delay}s infinite`,
         pointerEvents:   'none',
       })
 
@@ -66,7 +66,7 @@ export default function FloralBackground() {
     <>
       {/* Injecta a keyframe globalmente — só uma vez */}
       <style>{`
-        @keyframes velouPetalFall {
+        @keyframes memoriesPetalFall {
           0%   { opacity: 0;   transform: translateY(-30px) rotate(0deg);   }
           8%   { opacity: 0.7;                                               }
           92%  { opacity: 0.4;                                               }

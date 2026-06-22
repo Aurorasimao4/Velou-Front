@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-
+import { Link } from 'react-router-dom'
 export default function MemoryCard({ memory, index = 0 }) {
   // Aqui extraímos os campos do objecto memory
   const { title, note, category, author, reactions, comments, hasPhoto } = memory
@@ -57,6 +57,9 @@ export default function MemoryCard({ memory, index = 0 }) {
             <button className="btn-ghost body-sm" style={{ padding: '4px 8px', display: 'flex', alignItems: 'center', gap: 4 }}>
               ◯ {comments}
             </button>
+            <Link to={`/album/memoria/${memory.id}`}>
+  <h3 className="heading-3">{title}</h3>
+</Link>
           </div>
         </div>
       </div>

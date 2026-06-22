@@ -19,11 +19,11 @@ export default function LoginPage() {
 
     // TODO fase 4: substituir por chamada real à API Java
     // const { data } = await api.post('/auth/login', form)
-    // localStorage.setItem('velou_token', data.token)
+    // localStorage.setItem('memories_token', data.token)
 
     // Por agora simula login com qualquer email/password
     await new Promise((r) => setTimeout(r, 800))
-    localStorage.setItem('velou_token', 'dev-token')
+    localStorage.setItem('memories_token', 'dev-token')
     navigate('/album')
   }
 

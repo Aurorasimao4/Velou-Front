@@ -5,7 +5,7 @@ export default function MainLayout() {
   const navigate = useNavigate()
 
   function handleLogout() {
-    localStorage.removeItem('velou_token')
+    localStorage.removeItem('memories_token')
     navigate('/')
   }
 
@@ -39,7 +39,7 @@ export default function MainLayout() {
                 color: 'var(--text-primary)',
               }}
             >
-              Vel
+              Memo
             </span>
             <span
               style={{
@@ -50,7 +50,7 @@ export default function MainLayout() {
                 color: 'var(--text-secondary)',
               }}
             >
-              ou
+              ries
             </span>
           </NavLink>
 

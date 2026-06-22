@@ -27,7 +27,7 @@ export default function LandingPage() {
       >
         <motion.h1 variants={fadeUp} transition={{ duration: 0.7, ease: 'easeOut' }}
           style={{ fontFamily: 'var(--font-serif)', fontWeight: 300, fontSize: 'clamp(56px, 10vw, 96px)' }}>
-          Vel<em style={{ color: 'var(--text-secondary)' }}>ou</em>
+          Memo<em style={{ color: 'var(--text-secondary)' }}>ries</em>
         </motion.h1>
 
         <motion.div variants={fadeUp} transition={{ duration: 0.5 }}
@@ -35,7 +35,7 @@ export default function LandingPage() {
 
         <motion.p variants={fadeUp} transition={{ duration: 0.6 }}
           className="label" style={{ color: 'var(--text-muted)', letterSpacing: '0.25em' }}>
-          memórias que ficam para sempre
+          momentos que ficam para sempre
         </motion.p>
 
         <motion.p variants={fadeUp} transition={{ duration: 0.6 }}

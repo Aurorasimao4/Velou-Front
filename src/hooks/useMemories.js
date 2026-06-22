@@ -46,6 +46,17 @@ function fetchMemories() {
   )
 }
 
+export function useMemory(id){
+  return useQuery({
+    queryKey: ['memories', id],
+    queryFn: async () => {
+      const all = await fetchMemories()
+      return all.find((m) => String(m.id) === String(id))
+    },
+    enabled: !!id, // só corre se houver id
+  })
+}
+
 function createMemory(newMemory) {
   return new Promise((resolve) =>
     setTimeout(() => resolve({ id: Date.now(), ...newMemory }), 400)

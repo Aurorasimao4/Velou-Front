@@ -3,9 +3,10 @@ import LandingPage from './pages/LandingPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import TimelinePage from './pages/TimelinePage.jsx'
 import MainLayout from './components/layout/MainLayout.jsx'
+import MemoryDetailPage from './pages/MemoryDetailPage.jsx'
 
 // Simula auth — na fase 4 vem da API real
-const isAuthenticated = () => !!localStorage.getItem('velou_token')
+const isAuthenticated = () => !!localStorage.getItem('memories_token')
 
 function ProtectedRoute({ children }) {
   return isAuthenticated() ? children : <Navigate to="/entrar" replace />
@@ -26,6 +27,7 @@ export default function App() {
       >
         <Route index element={<TimelinePage />} />
       </Route>
+      <Route path="memoria/:id" element={<MemoryDetailPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )

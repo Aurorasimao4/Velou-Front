@@ -11,7 +11,7 @@ const api = axios.create({
 
 // Injeta o token JWT em cada pedido automaticamente
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('velou_token')
+  const token = localStorage.getItem('memories_token')
   if (token) {
     config.headers.Authorization = `Bearer ${token}`
   }
@@ -23,7 +23,7 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      localStorage.removeItem('velou_token')
+      localStorage.removeItem('memories_token')
       window.location.href = '/entrar'
     }
     return Promise.reject(error)
